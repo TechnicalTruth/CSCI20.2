@@ -24,6 +24,6 @@
         setting user variable equal to itself minus one
         
         "Repeat until user is correct"
-        create loop                     
+        this is done by creating a loop                   
         */
        
