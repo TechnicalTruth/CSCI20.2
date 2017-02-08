@@ -30,13 +30,13 @@ int main(){
     
     numQuart = numCent / 25;
     numDimes = (numCent % (numQuart * 25)) / 10;
-    numNickl = (numCent % ((numQuart * 25) + (numDimes * 10)))/ 5;                      //These equations are used to figure the ammount of Quarters, Dimes, Nickels, and Pennies
+    numNickl = (numCent % ((numQuart * 25) + (numDimes * 10)))/ 5;                      //These equations are used to figure the amount of Quarters, Dimes, Nickels, and Pennies
     numPenn = (numCent % ((numQuart * 25) + (numDimes * 10) + (numNickl * 5))) / 1;    //that were put into the 'numCent' variable (respectively). 
     
-    totalCash = numCent;
-    totalCash /= 100.0;                                                                 // I set the two variables equal to each other in order to maintain logistical order and readability 
-    cashBack = numCent - (numCent * 0.109);                                             // Yes I realize this is not in any way necessary 
-    cashBack /= 100.0;
+    totalCash = numCent;                                                                // I set the two variables equal to each other in order to maintain logistical order and readability
+    totalCash /= 100.0;                                                                 
+    cashBack = numCent - (numCent * 0.109);                                             //
+    cashBack /= 100.0;                                                                  // Yes I realize this is also not in any way necessary or efficient...
     
     cout << "Number of quarters: " << numQuart << endl;
     cout << "Number of dimes: " << numDimes << endl;

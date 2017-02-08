@@ -24,12 +24,14 @@ int main(){
     cin >> evnNumber;
     cout << "Please enter a high nuber: ";
     cin >> numHours;
+    cout << "Please enter a noun: ";
+    cin >> noun;
     cout << "Please enter a location: ";
     cin >> location;
     
     cout << "Juan wants to get an '" << letter << "' in his programming and algorithms class.";
     cout << " His professor was flaberghasted at the idea and said it couldn't be done but, ";
-    cout << "in the spirit of commradery, his professor is willing to automatically give him an automatic '" << letter;
+    cout << "in the spirit of commradery, his professor is willing to automatically give him an '" << letter;
     cout << "' if he can guess how many pairs of gold medals the U.S. will earn at the next " << noun << " games in " << location << endl;
     
     /*Juan wants to get an ___ in his programming and algorithms class. In the spirit of comradery, his professor is willing 
