@@ -44,8 +44,7 @@ int main(){
     cout << "Number of pennies: " << numPenn << endl;
     cout << "Your total is $" << totalCash << endl;
     cout << "Now there will be a 10.9% fee applied." << endl;
-    cout << "Your cash voucher will have a value of: $" << cashBack << endl;
-                                                                                        // All of the outputs used once user has entered input
-    return 0;
+    cout << "Your cash voucher will have a value of: $" << cashBack << endl;            // Outputs are to present all denominations individually and then together as a total dollar value
+                                                                                        // All of the outputs used once user has entered input    return 0;
     
 }
