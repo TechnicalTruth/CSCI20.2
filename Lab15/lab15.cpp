@@ -1,5 +1,5 @@
 // Name: Juan Lemus
-// Lab: Mad Libs
+// Lab: Mad Libs; using user input to create an electronic version of a madlib
 // Date: 2/7/17
 
 #include <iostream>
