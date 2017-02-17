@@ -30,7 +30,10 @@ int main()
     cin >> yearsAhead;
     
     yearChosen = 2017 + yearsAhead;
-    popGrowth = bbyBirthrate * 525600 * yearsAhead;                    // 525600 comes from 60*60*24*365 
+    popGrowth = bbyBirthrate * 525600 * yearsAhead;
+    
+    // 525600 comes from 60*60*24*365 
+    
     estPopulation = currPopulation + popGrowth;
     
     cout << "You chose to estimate the U.S. population " << yearsAhead << " years in the future." << endl;
