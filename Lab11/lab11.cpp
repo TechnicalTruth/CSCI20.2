@@ -4,7 +4,8 @@
 
     /*  
         "10 points assigned to player" 
-        this is done by initializing a variable representative of the player and assigning it an inital value of '10'
+        this is done by initializing a variable representative of the 
+        player and assigning it an inital value of '10'
     
         "Computer chooses a number between 1 and 100"
         
@@ -14,7 +15,8 @@
         "If user is correct they win" 
         if statement condition 'usrIn = number generated' output 'You Win'
         
-        "If user is incorrect the computer tells them if the number is higher or lower than their selection"
+        "If user is incorrect the computer tells them if the number is higher 
+        or lower than their selection"
         
         
         "Program resets and asks user to guess once again"

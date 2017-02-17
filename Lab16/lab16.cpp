@@ -1,5 +1,7 @@
 //Name: Juan Lemus
-//Description: Zombie parts tosser, user picks specific types of zombie parts to create two monsters while the rest are pre-determined
+/*Description: Zombie parts tosser, user picks specific 
+types of zombie parts to create two monsters while the rest are pre-determined.
+Lab focuses on the re-use of structs for multiple */
 //Date: 2/9/17
 
 #include <iostream>
@@ -26,7 +28,7 @@ int main(){
     Monster monsterTwo;
     Monster monsterThree;
     Monster monsterFour;
-                                                                                // MOnster One is being created by user
+                                     // MOnster One is being created by user
     cout << "Please name your first monster: ";
     cin >> monsterOne.name;
     cout << "Choose a head type for this monster: ";
@@ -39,7 +41,7 @@ int main(){
     cin >> monsterOne.nose;
     cout << "Choose a mouth type for this monster: ";
     cin >> monsterOne.mouth;
-                                                                                //Monster Two is being created by user
+                                        //Monster Two is being created by user
     cout << "Please name your second monster: ";
     cin >> monsterTwo.name;
     cout << "Choose a head type for this monster: ";
@@ -52,14 +54,14 @@ int main(){
     cin >> monsterTwo.nose;
     cout << "Choose a mouth type for this monster: ";
     cin >> monsterTwo.mouth;
-                                                                                //Premade Monster Three is defined
+                                          //Premade Monster Three is defined
     monsterThree.name = "Craig";
     monsterThree.head = "Zombus";
     monsterThree.eyes = "Wackus";
     monsterThree.ears = "Spritem";
     monsterThree.nose = "Spritem";
     monsterThree.mouth = "Vegitas";
-                                                                                //Premade Monster Four is defined
+                                            //Premade Monster Four is defined
     monsterFour.name = "Greg";
     monsterFour.head = "Franken";
     monsterFour.eyes = "Vegitas";
@@ -67,14 +69,18 @@ int main(){
     monsterFour.nose = "Wackus";
     monsterFour.mouth = "Wackus";
     cout << endl;
-                                                                                //Following is the output describing every Monster (One - Four)
+                //Following is the output describing every Monster (One - Four)
+                
     cout << "Monster name: " << monsterOne.name << endl;
     cout << "Head type: " << monsterOne.head << endl;
     cout << "Eye type: " << monsterOne.eyes << endl;
     cout << "Ear type: " << monsterOne.ears << endl;
     cout << "Nose type: " << monsterOne.nose << endl;
     cout << "Mouth type: " << monsterOne.mouth << endl;
-    cout << endl;                                                               //additional endlines were added after each monster in order for the output to improve output readability and overall appearance
+    cout << endl;   
+    
+    /*additional endlines were added after each monster in order for the output
+    to improve output readability and overall appearance*/
     
     cout << "Monster name: " << monsterTwo.name << endl;
     cout << "Head type: " << monsterTwo.head << endl;
