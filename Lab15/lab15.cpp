@@ -3,7 +3,9 @@
 // Date: 2/7/17
 
 #include <iostream>
-#include <string>                   //including this library is necessary in order to use strings
+#include <string>                  
+
+//including string library is necessary in order to use strings
 
 using std :: cin;
 using std :: cout;
