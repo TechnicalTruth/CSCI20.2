@@ -10,6 +10,8 @@ using std :: cout;
 using std :: endl;
 using std :: string;
 
+
+//struct created to hold worker information
 struct checkstub {
     
     string name;
@@ -21,8 +23,10 @@ struct checkstub {
 
 int main(){
     
-    checkstub workerOne;
+    checkstub workerOne; //Random worker defined
     
+    
+        //all input is asked for by the program
     cout << "Please enter your name: ";
     getline(cin, workerOne.name);
     cout << "Please enter your weekly hours: ";
@@ -31,9 +35,11 @@ int main(){
     cin >> workerOne.rate;
     cout << endl;
     
+        //Equations using input to find worker's Gross and Net Pay
     workerOne.grssWage = (workerOne.hours * workerOne.rate);
     workerOne.netPay = workerOne.grssWage - (130 + (workerOne.grssWage * 0.17));
 
+    //Worker information displayed after all input and calculations are finished
     cout << "Name: " << workerOne.name << endl;
     cout << "Hours: " << workerOne.hours << endl;
     cout << "Rate: " << workerOne.rate << "/hr" << endl;
