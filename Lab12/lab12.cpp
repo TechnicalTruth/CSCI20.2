@@ -1,5 +1,6 @@
 //Juan Lemus
-//Lab Description: Keyboard painting
+/*Lab Description: ASCII ART; focusing on learing how to ouput information on 
+C++*/
 //Date: 2/2/17
 
 #include <iostream>
@@ -7,7 +8,8 @@ using namespace std;
 
 int main ()
 
-{
+{                           //outputs being used in tandem to create a picture
+
     cout << "         666666                " << endl;
     cout << "        666  666               " << endl;
     cout << "      6666     66666           " << endl;
