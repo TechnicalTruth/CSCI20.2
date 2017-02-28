@@ -11,7 +11,7 @@ using std :: cout;
 using std :: cin;
 using std :: endl;
 
-void rndmNum();
+void rndmNum();     //rndmNum function is declared
 
 int main(){
     
@@ -20,7 +20,7 @@ int main(){
     return 0;
 }
 
-void rndmNum (){        //like this or with 'int' ???? only diff is 'return' vs 'return 0'
+void rndmNum (){        //rndmNum function is defined
     
     srand(time(0));
     
