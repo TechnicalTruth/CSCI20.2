@@ -14,13 +14,15 @@ using std :: cout;
 using std :: endl;
 
 void swapFunc(int& upLim, int& lowLim);
-void rndmNum(int upLim, int lowLim);                    //functions are declared
+int rndmNum(int upLim, int lowLim);                     //functions are declared
 
 
 int main(){
     
     int lowLim = 0;
     int upLim = 0;
+    int usrRndNum = 0;
+    
     
     cout << "Please enter a lower limit: ";                  
     cin >> lowLim;
@@ -28,13 +30,19 @@ int main(){
     cin >> upLim;
     
     
-    rndmNum(upLim, lowLim);
+    usrRndNum = rndmNum(upLim, lowLim);
+    
+    cout << "_________________________________" << endl;
+    cout << "You entered a lower Limit of: " << lowLim << endl;
+    cout << "You entered an upper limit of: " << upLim << endl;
+    cout << "Your random number is: " << usrRndNum << endl;
+    cout << "_________________________________" << endl; 
     
     return 0;
     
 }
 
-                                                  //functions are being defined
+                                                   //functions are being defined
   
 void swapFunc(int& upLim, int& lowLim){
 
@@ -52,23 +60,17 @@ void swapFunc(int& upLim, int& lowLim){
     
 }
 
-void rndmNum (int upLim, int lowLim){      
+int rndmNum (int upLim, int lowLim){      
     
-    int usrRndNum;
+    int usrRndNum = 0;
     
     srand(time(0));
     
     swapFunc(upLim, lowLim);    //Swapping user Values inside rndmNum() fucntion
     
-    usrRndNum = ((rand() % lowLim) + upLim);   
+    usrRndNum = ((rand() % (lowLim - upLim)) + upLim);   
                                          //creates rndm number in between limits
     
-    cout << "_________________________________" << endl;
-    cout << "You entered a lower Limit of: " << upLim << endl;
-    cout << "You entered an upper limit of: " << lowLim << endl;
-    cout << "Your random number is: " << usrRndNum << endl;
-    cout << "_________________________________" << endl;
-    
-    return;
+    return usrRndNum;
 }
 
