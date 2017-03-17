@@ -43,11 +43,7 @@ int main(){
     cout << "Your weight in Pounds is: " << usWeight << endl;
     cout << "_________________________________" << endl; 
     
-    
-    
     return 0;
-    
-    
 }
                                                    //functions are being defined
 void swapFunc(int& upLim, int& lowLim){
@@ -61,9 +57,7 @@ void swapFunc(int& upLim, int& lowLim){
     upLim = tempVarB;          //Assinging new values to original user variables
     lowLim = tempVarA;
     
-
     return;
-    
 }
 
 int rndmNum (int upLim, int lowLim){      
@@ -79,6 +73,7 @@ int rndmNum (int upLim, int lowLim){
     
     return usrRndNum;
 }
+
 double lbsToKilos(double usWeight){
     
     double euWeight = 0.0;   //Local variable only used in lbsToKilos() function
@@ -87,6 +82,7 @@ double lbsToKilos(double usWeight){
     
     return euWeight;
 }
+
 double kilosToLbs(double euWeight){
     
     double usWeight = 0.0;   //Local variable only used in kilosToLbs() function
