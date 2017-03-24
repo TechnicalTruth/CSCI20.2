@@ -10,7 +10,10 @@ using std :: cout;
 using std :: endl;
 using std :: string;
 
-class MONAY {
+/*Currency conversion class; This could be used by anyone who is wanting to make
+monetary gain in different countries */
+
+class MONAY {                                        
     public:
                                                            //default constructor
         MONAY(){
@@ -56,7 +59,7 @@ class MONAY {
         double getEurosToYuan(){
             return dollVal * 7.45;
         }
-        void print (){
+        void print (){               //Print function responsible for all output
             
      cout << "You have a value of: " << endl;       
      cout << "Dollar Value: $" << getDollEq() << endl;
@@ -76,7 +79,7 @@ int main(){
     
        double intVal;
         
-       MONAY rndmUser;
+       MONAY rndmUser;                                         //Creating Object
        
        rndmUser.setDollToDollars(1.0);
        rndmUser.setDollToYuan(1.0);
@@ -86,7 +89,7 @@ int main(){
        rndmUser.setBitsToDollars(1);
        rndmUser.setEurosToYuan(6748.72);
        
-       rndmUser.print();
+       rndmUser.print();                         //Print function called by user
        
        return 0;
 }
