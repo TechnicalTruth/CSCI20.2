@@ -17,6 +17,9 @@ int main(){
     double unlDataPlan;
     double payPerG;
     double userCost;
+    double upCost;
+    double devCost;
+    string userPhone;
     string userIn;
     string userPlan;
     
@@ -24,17 +27,17 @@ int main(){
     cout << "Standard Phone - (Std)" << endl;
     cout << "Smarphone - (Adv)" << endl;
     cout << "Tablet - (Tab)" << endl;
-    cin >> userPlan;
+    cin >> userPhone;
     
-    if(userPlan == "Std"){
-        userCost = dumbPlan;
+    if(userPhone == "Std"){
+        upCost = dumbPlan;
         
     }
-    else if(userPlan == "Adv"){
-        userCost = smartPlan;
+    else if(userPhone == "Adv"){
+        upCost = smartPlan;
     }  
-    else if(userPlan == "Tab"){
-        userCost = tabPlan;
+    else if(userPhone == "Tab"){
+        upCost = tabPlan;
     }
     
     cout << "Please choose between our available plans as follows: " << endl;
@@ -43,13 +46,16 @@ int main(){
     cin >> userIn;
     
     if(userIn == "UD"){
-        userCost = userCost + unlDataPlan;
+        devCost = unlDataPlan;
     }
     
     else if(userIn == "PPD"){
-        userCost = userCost + payPerG;
+        devCost = payPerG;
     }
-    
+    else{
+        cout << "You broke" << endl;
+    }
+    userCost = upCost + devCost;
     
     cout << "You're total will be: $" << userCost << endl;
     cout << "Tank you come again!" << endl;
