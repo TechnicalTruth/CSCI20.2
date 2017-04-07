@@ -41,6 +41,8 @@ srandNum = rndmNum();
         cin >> userGuess;
     }
     
+    return 0;
+    
 }
 
 
@@ -51,7 +53,7 @@ int rndmNum(){       //rndmNum function is defined
     
     srand(time(0));
     
-    ((rand() % 50) + 1);
+   srandNum = ((rand() % 50) + 1);
     
     return srandNum;
 }
