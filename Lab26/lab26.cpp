@@ -12,22 +12,29 @@ using std :: endl;
 
  class TemperatureConverter{
      public:
+     
+ //sets kelvin value to 0
         int TeperatureConverter(int kelvin_){
             kelvin_ = 0;
         }
+        
+//kelvin stays the same
        void SetTempFromKelvin(double kelvin_){
            kelvin_;
            
         }
+// Celsius to kelvin
         void SetTempFromCelsius(double celsius){
             kelvin_ = celsius_ + 273.15; 
             
         }
+//Fahrenheit to kelvin
         void SetTempFromFahrenheit(double fahrenheit){
             kelvin_ = (5 * (fahrenheit_ - 32)/9) + 273.15;
             
         }
-        
+
+//Get functions requried to pull informatino from class        
         double GetTempFromKelvin(){
             return kelvin_;
         }
@@ -37,6 +44,7 @@ using std :: endl;
         double GetTempAsFahrenheit(){
             return ((celsius_ * 9) / 5 + 32);
         }
+//Print function to avoid redundancy
        void PrintTemperatures(double kelvin_, double celsius_, double fahrenheit_){
             
         }
@@ -48,6 +56,9 @@ using std :: endl;
  };
  
  int main(){
+    
+    /*if else statemtents not available to provide variability on what functions
+    to use, hardcode seemed like the best option to test all requried functions*/
     
     TemperatureConverter temp1; //testing default constructor
     TemperatureConverter temp2(274); //testing overloaded constructor

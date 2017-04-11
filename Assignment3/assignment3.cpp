@@ -79,18 +79,20 @@ int main(){
         else if(userIn == 's' || userIn == 'S'){
             
            for(itterations = 0; itterations < 6; ++itterations){
-               if(itterations == 5){
-                   break;
-               }
                 diVal = srandNum();
-//if else used once agian to evaluate if dice landed on one
+//if else userd once again to evaluate if dice landed on one
                 if(diVal == 1){
+                    
                     ai.resetScore();
-                
+                    itterations = 6;
                 }
                 else{
                     ai.setScore(diVal);
+                    
                 }
+
+
+    
             
         }
         }
