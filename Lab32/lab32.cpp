@@ -15,7 +15,6 @@ int main(){
     const double userExemption = 3900.00;
     double totalExemtion;
     string userOne;
-    //string userTwo;
     char maritalStatus;
     double grssWage;
     double agiWage;
@@ -39,8 +38,6 @@ int main(){
         case 'M':
         case 'm':
         
-        //cout << "Enter the name of your spouse: ";
-        //getline(cin, userTwo);
         totalExemtion = userExemption * 2.0;
         
         break;
@@ -72,7 +69,7 @@ int main(){
             totalAgiWage = agiWage - (((agiWage - 87850.0) * 0.28) + 17891.25);
         }
         else {
-            cout << "You my friend are beyond poor..." << endl;
+            cout << "You my friend are beyond BROKE..." << endl;
             
         }
     }
@@ -100,16 +97,22 @@ int main(){
     }
     if(totalAgiWage < 0){
         
-        cout << "You owe $" << totalAgiWage * -1 << endl;
+
+    cout << "Name: " << userOne << endl;
+    cout << "Total Tax Owed: " << totalAgiWage * -1 << endl;
+    cout << userOne << "is entitled to a REFUND of $" << totalAgiWage * -1 << endl;
     }
     else {
-        
-        cout << "You do not owe any money! You will recieve a refund of $" << totalAgiWage << endl;
+    cout << "Name: " << userOne << endl;
+    cout << "Total Gross Adjusted Income: " << totalAgiWage << endl;
+    cout << "Total Tax Owed: $0" << endl;
+    cout << userOne << "is entitled to a REFUND of $" << totalAgiWage << endl;
+  
     }
    /* cout << "Name: " << userOne << endl;
     cout << "Total Gross Adjusted Income: " << totalAgiWage << endl;
     cout << "Total Tax Owed: " <<FILLERVARIABLE****** << endl;
-    cout << userOne << "is entitled to a REFUND of $" << FILLERVARIABLE******* << endl;
+    cout << userOne << "is entitled to a REFUND of $" << totalAgiWage << endl;
     */
     return 0;
 }
