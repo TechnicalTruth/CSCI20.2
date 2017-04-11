@@ -11,12 +11,16 @@ using std :: string;
 class SCORE{
     public:
     SCORE(){
-        //Default contstructor
+//Default contstructor
         score_ = 0;
     }
     
     void setScore(int diVal){
         score_ = score_ + diVal;
+    }
+//allows me to reset score whenever player rolls a '1'
+    void resetScore(){
+        score_ = 0;
     }
     
 //Returns player's score
@@ -38,7 +42,7 @@ int main(){
     int itterations;
     char userIn;
     
-    //objects created to keep score
+//objects created to keep score
     SCORE user;
     SCORE ai;
     
@@ -51,17 +55,20 @@ int main(){
 // user entering 'R' continues his turn
         if(userIn == 'r' || userIn == 'R'){
 // if else statement allows us to reset his score if he gets a 1
+            diVal = 0;
             diVal = srandNum();
+            //Allows program to reset user's score to zero when rolling a '1'
                 if(diVal != 1){
                     
                     user.setScore(diVal);
                         cout << "You rolled a " << diVal << " and  your new score is now: " << user.getScore() << endl;
-                 
+                        
                 }
                 else{
-                    //[FIXME]
-                      
+                   
+                    user.resetScore();
                     cout << "What a shame, you rolled a '1' and your score will now be reset." << endl;
+                    userIn = 's';
                     
                 }
             
@@ -72,17 +79,17 @@ int main(){
         else if(userIn == 's' || userIn == 'S'){
             
            for(itterations = 0; itterations < 6; ++itterations){
-               
+               if(itterations == 5){
+                   break;
+               }
                 diVal = srandNum();
 //if else used once agian to evaluate if dice landed on one
                 if(diVal == 1){
-                    //[FIXME]
+                    ai.resetScore();
                 
                 }
                 else{
                     ai.setScore(diVal);
-                    
-                    itterations = 6; 
                 }
             
         }
@@ -90,7 +97,7 @@ int main(){
 //allows user to quit at any time
         else if (userIn == 'q' || userIn == 'Q'){
             
-            cout << "Are you sure you wish to quit?" << endl;
+            cout << "Are you sure you wish to quit? ( y / n )" << endl;
             cin >> userIn;
             
         }
@@ -134,7 +141,7 @@ int srandNum(){
     srand(time(0));
     
 //The '6' & '1' parameters allow for proper dice simulation
-    sRandNum = ((sRandNum % 6) + 1);
+    sRandNum = ((rand() % 6) + 1);
     
     return sRandNum;
 }
