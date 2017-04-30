@@ -52,8 +52,7 @@ class ArrayTools{
     }
     int search(int userIn){
         
-        cout << myArray[userIn];
-        
+        return myArray[userIn];
     }
     int Is_stored(){
         for(i = 0; i < SIZE; ++i){

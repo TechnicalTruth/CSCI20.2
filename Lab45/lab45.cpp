@@ -1,7 +1,7 @@
 //Name: Juan Lemus 
 //Date: 4/25/17
 /*Lab Description: This lab focuses on the proper and effective use of modern strings
-while providing an emphasis on hte improtance of string and character tools that can be useful
+while providing an emphasis on the improtance of string and character tools that can be useful
 in providing variation to a program output
 */
 #include <iostream>
