@@ -84,66 +84,50 @@ int main(){
         
         numVal = numVal - 1; // index and menu are off my 1 unit
         
-       // if(numVal == -1){
-            buyMore != true; //should it be !true?***
-       // }
-        
-        
 //Ensures that user doesn't enter an invalid index value
-        if(prodNum >= 0 && numVal <= 0){
+        if(numVal >= 0 && numVal < 10){
+            cout << "You have chosen: " << menuItem[numVal] << endl;
             cout << "How many of them would you like? Currentlly in stock: " << stockLeft[numVal] << "." << endl;
             cin >> qtyWanted;
         }
-        else{
-            cout << "You have entered an invalid menu item, please try again: ";
-            cin >> prodNum;
-        }
         
 //if out of stock, this loop runs
-        while (stockLeft[prodNm] == 0){
+       while (stockLeft[numVal] == 0){
             
             cout << "We are very sorry, we are out of that product. Please choose another item: ";
-            cin >> prodNum;
-            prodNum = prodNum - 1;
+            cin >> numVal;
+            numVal = numVal - 1;
             
-            if (prodNum == -1){
-                buyMore != true;
+            if (numVal == -1){
+                buyMore == false;
             }
         }
         
         
 
         
-        if(qtyWanted > stockLeft[prodNum]){
-            cout << "Sorry, we currently only have: " << stockLeft[prodNum] << ". Would you like to take the rest (1 for yes, 0 for no)?" << endl;
+        if(qtyWanted > stockLeft[numVal]){
+            cout << "Sorry, we currently only have: " << stockLeft[numVal] << ". Would you like to take the rest (1 for yes, 0 for no)?" << endl;
             cin >>  numTaken;
-                if(takeHome == 1){
-                    stockLeft[prodNum] = 0;
+                if(numTaken == 1){
+                    stockLeft[numVal] = 0;
                     
                 }
-                else{
-                    stockLeft[prodNum] = stockLeft[prodNum];
-                }
 //reduces the amount in stock
-        if(qtyWanted <= stockLeft[prodNum]){
-            stockLeft[prodNum] = prodInventory[prodNum] - qtyWanted;
+        if(qtyWanted <= stockLeft[numVal]){
+            stockLeft[numVal] = stockLeft[numVal] - qtyWanted;
         }
         }
         
 //sets user's total cost
-        itemCost = prodCost[prodNum] * qtyWanted;
+        itemCost = prodCost[numVal] * qtyWanted;
         totalCost = totalCost + itemCost;
         
         }
         
 //outputs customer's total
-        if(buyMore != true){
             cout << "Your total today will be: " << totalCost << endl;
             cout << "Tank you come again!" << endl;
-        }
-        
-        return 0;
-    }
-    
-    
+            
+            return 0;
 }
