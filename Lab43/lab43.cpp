@@ -7,6 +7,20 @@ using std :: cin;
 using std :: cout;
 using std :: endl;
 
+class CART{
+    public:
+    Cart(){
+        totalCost_ = 0;
+    }
+    void setCharge(double price_){
+        price_ = price;
+    }
+    void setSold(int amtSold){
+        Sold_ = amtSold;
+    }
+     void setInventory
+};
+
 int main(){
     
    string menuItem[10];
@@ -35,17 +49,6 @@ int main(){
     menuItem [7] = "Raspberry";
     menuItem [8] = "Blueberry";
     menuItem [9] = "Blackberry";
-    /*
-    for(int i = 0; i < 10;++i)
-        
-        cout << i+1 << ") " << menuItem[i] << endl;
-        cout << "Choose product (1-10)"<< endl;
-    
-    while(cin >> menuItemDef){
-        
-        price_stock[1][menuItemDef-1] -= 1;
-        
-       
-    */
+  
     return 0;
 }
