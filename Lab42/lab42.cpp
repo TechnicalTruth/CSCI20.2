@@ -80,12 +80,23 @@ int main(){
     
     while (buyMore == true){
         cout << "Choose a product (1-10)." << endl;
-        cin >> prodNum;
+        cin >> numVal;
         
-        prodNum = prodNum - 1 // index and menu are off my 1 unit
+        numVal = numVal - 1; // index and menu are off my 1 unit
         
-        if(prodNum == -1){
-            keepShopping != true //should it be !true?***
+       // if(numVal == -1){
+            buyMore != true; //should it be !true?***
+       // }
+        
+        
+//Ensures that user doesn't enter an invalid index value
+        if(prodNum >= 0 && numVal <= 0){
+            cout << "How many of them would you like? Currentlly in stock: " << stockLeft[numVal] << "." << endl;
+            cin >> qtyWanted;
+        }
+        else{
+            cout << "You have entered an invalid menu item, please try again: ";
+            cin >> prodNum;
         }
         
 //if out of stock, this loop runs
@@ -101,15 +112,7 @@ int main(){
         }
         
         
-//Ensures that user doesn't enter an invalid index value
-        if(prodNum >= 0 && prodNum <= 0){
-            cout << "How many of them would you like? Currentlly in stock: " << stockLeft[numVal] << "." << endl;
-            cin >> qtyWanted;
-        }
-        else{
-            cout << "You have entered an invalid menu item, please try again: ";
-            cin >> prodNum;
-        }
+
         
         if(qtyWanted > stockLeft[prodNum]){
             cout << "Sorry, we currently only have: " << stockLeft[prodNum] << ". Would you like to take the rest (1 for yes, 0 for no)?" << endl;
